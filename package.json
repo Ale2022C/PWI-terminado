@@ -1,0 +1,19 @@
+{
+  "name": "pwi-tp",
+  "version": "1.0.0",
+  "description": "Trabajo final",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ale",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.8",
+    "path": "^0.12.7"
+  }
+}
