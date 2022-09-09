@@ -48,7 +48,7 @@ app.get('/formulario', (req, res) => {
     })
 });
 
-app.get('/listado', (req, res) => {
+// app.get('/listado', (req, res) => {
 
     // let sql = 'SELECT * FROM preprocesadores';
 
@@ -59,7 +59,7 @@ app.get('/listado', (req, res) => {
                 style: 'listado.css',
                 // results: result,
         });
-    });
+    // });
 // });
 
 
