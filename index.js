@@ -6,23 +6,23 @@ const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+// const PORT = process.env.PORT || 8080;
 
 // Conexión a la Base de Datos
-const conexion = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
-});
+// const conexion = mysql.createConnection({
+//     host: process.env.HOST,
+//     user: process.env.USER,
+//     password: process.env.PASSWORD,
+//     database: process.env.DATABASE
+// });
 
-conexion.connect((err) => {
-    if (err) {
-        console.error(`Error en la conexión: ${err.stack}`)
-        return;
-    }
-    console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`);
-});
+// conexion.connect((err) => {
+//     if (err) {
+//         console.error(`Error en la conexión: ${err.stack}`)
+//         return;
+//     }
+//     console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`);
+// });
 
 //Configurar Middlewares
 app.use(express.json());
@@ -50,17 +50,17 @@ app.get('/formulario', (req, res) => {
 
 app.get('/listado', (req, res) => {
 
-    let sql = 'SELECT * FROM preprocesadores';
+    // let sql = 'SELECT * FROM preprocesadores';
 
-        conexion.query(sql, (err, result) => {
-            if (err) throw err;
+    //     conexion.query(sql, (err, result) => {
+    //         if (err) throw err;
             res.render('listado', {
                 titulo: 'Listado de productos', 
                 style: 'listado.css',
-                results: result,
+                // results: result,
         });
     });
-});
+// });
 
 
 app.get('/preprocesadores', (req, res) => {
@@ -70,35 +70,35 @@ app.get('/preprocesadores', (req, res) => {
     });
 });
 
-app.post('/formulario', (req, res) => {
-    const { nombre, apellido, mensaje } = req.body;
+// app.post('/formulario', (req, res) => {
+//     const { nombre, apellido, mensaje } = req.body;
 
-    // console.log(nombre, precio);
+//     // console.log(nombre, precio);
 
-    if (nombre == '' || apellido == '' || mensaje == '') {
-        let validacion = 'Rellene los campos correctamente..';
-        res.render('formulario', {
-            titulo: 'Formulario para preprocesadores',
-            validacion
-        });
-    } else{
+//     if (nombre == '' || apellido == '' || mensaje == '') {
+//         let validacion = 'Rellene los campos correctamente..';
+//         res.render('formulario', {
+//             titulo: 'Formulario para preprocesadores',
+//             validacion
+//         });
+//     } else{
 
-        let datos = {
-            nombre: nombre, 
-            apellido: apellido,
-            mensaje: mensaje
-        };
+//         let datos = {
+//             nombre: nombre, 
+//             apellido: apellido,
+//             mensaje: mensaje
+//         };
 
-        let sql = 'INSERT INTO preprocesadores SET ?';
+//         let sql = 'INSERT INTO preprocesadores SET ?';
 
-        conexion.query(sql, datos, (err, result) => {
-            if (err) throw err;
-            res.render('formulario', {
-                titulo: 'Formulario para preprocesadores'
-            });
-        });
-    }
-});
+//         conexion.query(sql, datos, (err, result) => {
+//             if (err) throw err;
+//             res.render('formulario', {
+//                 titulo: 'Formulario para preprocesadores'
+//             });
+//         });
+//     }
+// });
 
 app.get('/contacto', (req, res) => {
     res.render('contacto', {
@@ -192,16 +192,11 @@ app.post('/contacto', (req, res) => {
     }
 })
 
-app.listen(PORT, () => {
-    console.log(`El servidor está trabajando en el Puerto ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`El servidor está trabajando en el Puerto ${PORT}`);
+// });
 
-// 1 Comentar console.logs
-// 2 Comentar codigo de prueba
-// 3 Desconectamos la base de datos
-// 4 Comentamos las variables de entorno que no usamos (.env)
-// 5 Ir al package.json y crear script "start"
-// 6 Crear un archivo Procfile
+
 
 
 
