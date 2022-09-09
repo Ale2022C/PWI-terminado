@@ -1,0 +1,33 @@
+
+
+<div class="container">       
+    <div class="text-center m-5 text-white">
+        <hr>
+        <hr>
+        <hr>
+        <h2>
+            Registro de visitantes
+        </h2>
+        <hr>
+        <hr>
+        <hr>
+    <table class="table text-white">
+        <thead>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Mensaje</th>
+        </thead>
+        <tbody>
+            {{#each results }}
+            <tr>
+                <td>{{ nombre }}</td>
+                <td>{{ apellido }}</td>
+                <td>{{ mensaje }}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+</div>  
+</div>
+

@@ -33,7 +33,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
-//conexion.end();
 
 app.get('/', (req, res, next) => {
     res.render('index', {
@@ -44,62 +43,58 @@ app.get('/', (req, res, next) => {
 
 app.get('/formulario', (req, res) => {
     res.render('formulario', {
-        titulo: 'Formulario para Productos',
+        titulo: 'Formulario para preprocesadores',
         style: 'formulario.css'
     })
 });
 
-app.get('/productos', (req, res) => {
+app.get('/listado', (req, res) => {
 
-    let sql = 'SELECT * FROM producto';
+    let sql = 'SELECT * FROM preprocesadores';
 
         conexion.query(sql, (err, result) => {
             if (err) throw err;
-            res.render('productos', {
-                titulo: 'Formulario para Productos', 
+            res.render('listado', {
+                titulo: 'Listado de productos', 
+                style: 'listado.css',
                 results: result,
         });
     });
 });
 
-app.get('/productos', (req, res) => {
-    res.render('productos', {
-        titulo: 'Formulario para Productos', 
+
+app.get('/preprocesadores', (req, res) => {
+    res.render('preprocesadores', {
+        titulo: 'Preprocesadores', 
+        style: 'preprocesadores.css'
     });
 });
 
 app.post('/formulario', (req, res) => {
-    //Desestructuración de datos
-    //const {nombre, apellido, dni } = req.body;
-    //Asigno datos a las variables enviadas desde el front
-    /* let nombre = req.body.nombre;
-    let precio = req.body.precio; */
-    /* res.send(`Tus datos han sido recibidos: Nombre: ${nombre} y Apellido: ${apellido} y DNI: ${dni}`); */
-
-
-    const { nombre, precio } = req.body;
+    const { nombre, apellido, mensaje } = req.body;
 
     // console.log(nombre, precio);
 
-    if (nombre == '' || precio == '') {
+    if (nombre == '' || apellido == '' || mensaje == '') {
         let validacion = 'Rellene los campos correctamente..';
         res.render('formulario', {
-            titulo: 'Formulario para Productos',
+            titulo: 'Formulario para preprocesadores',
             validacion
         });
     } else{
 
         let datos = {
             nombre: nombre, 
-            precio: precio
+            apellido: apellido,
+            mensaje: mensaje
         };
 
-        let sql = 'INSERT INTO producto SET ?';
+        let sql = 'INSERT INTO preprocesadores SET ?';
 
         conexion.query(sql, datos, (err, result) => {
             if (err) throw err;
             res.render('formulario', {
-                titulo: 'Formulario para Productos'
+                titulo: 'Formulario para preprocesadores'
             });
         });
     }
@@ -107,7 +102,48 @@ app.post('/formulario', (req, res) => {
 
 app.get('/contacto', (req, res) => {
     res.render('contacto', {
-        titulo: 'Formulario para suscripcion'
+        titulo: 'Formulario para suscripcion',
+        style: 'contacto.css'
+    })
+})
+
+app.get('/haml', (req, res) => {
+    res.render('haml', {
+        style: 'prepro-contenido.css'
+    })
+})
+
+app.get('/jade', (req, res) => {
+    res.render('jade', {
+        style: 'prepro-contenido.css'
+    })
+})
+
+app.get('/slim', (req, res) => {
+    res.render('slim', {
+        style: 'prepro-contenido.css'
+    })
+})
+
+app.get('/sass', (req, res) => {
+    res.render('sass', {
+        style: 'prepro-contenido.css'
+    })
+})
+
+app.get('/stylus', (req, res) => {
+    res.render('stylus', {
+        style: 'prepro-contenido.css'
+    })
+})
+app.get('/postcss', (req, res) => {
+    res.render('postcss', {
+        style: 'prepro-contenido.css'
+    })
+})
+app.get('/less', (req, res) => {
+    res.render('less', {
+        style: 'prepro-contenido.css'
     })
 })
 
@@ -147,6 +183,7 @@ app.post('/contacto', (req, res) => {
         // res.send(`Tu nombre es ${nombre} y tu email registrado es ${email}`);
         res.render('enviado', {
             titulo: 'Mail enviado satisfactoriamente',
+            style: 'enviado.css',
             nombre,
             email
         })

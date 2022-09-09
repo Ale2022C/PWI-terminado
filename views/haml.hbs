@@ -1,0 +1,77 @@
+<br><hr>
+<h1>
+    <u>HAML</u>
+</h1>
+<hr><br><br>
+<h2>
+  "El marcado debería ser hermoso"
+</h2>
+<br><br><br>
+<h3>
+  ¿Qué es HAML?
+</h3>
+<p>
+  HAML (HTML Abstraction Markup Language) es un lenguaje de marcado ligero con el que podemos crear plantillas HTML a partir de un sencillo lenguaje de dominio específico.
+  Está diseñado para ser un lenguaje de marcado tan elegante como sea posible. 
+<br><br>
+  Busca hacer plantillas más sencillas y deshacerse de los lenguajes “feos” o difíciles de entender. Haml eliminina la necesidad de escribir código HTML específico dentro de la plantilla.
+</p>
+<hr>
+<h3>
+  Principios de HAML
+</h3>
+<hr>
+<br>
+<h5>
+  El marcado debería ser bonito
+</h5>
+<p>
+  El marcado no debería usarse solamente como una herramienta para lograr que los navegadores muestren una página como el autor lo desee. El marcado se debe entender, debería ser amigable y placentero como el renderizado.
+</p>
+<br>
+<h5>
+  El marcado no debería repetirse
+</h5>
+<p>
+  HTML implica grandes repeticiones. La mayoría de los elementos deben ser nombrados dos veces: una vez antes de su contenido y otra después.
+
+  ERB agrega aun más repetición y caracteres innecesarios. Haml evita todo esto recurriendo al sangrado en vez del texto para determinar dónde empiezan y terminan los elementos y los bloques de código. Esto no soloda como resultado plantillas más compactas sino que además hace el código mucho más limpio a la vista.
+</p>
+<br>
+<h5>
+  El marcado debería tener un buen sangrado
+</h5>
+<p>
+  Uno de los mayores problemas de los lenguajes de plantillas tradicionales es que no solo no fomentan el código bien sangrado sino que encima lo hacen difícil o incluso imposible de escribir. El resultado es un XHTML confuso e ilegible. Haml formatea las etiquetas de manera que todas estén bien sangradas y reflejen la estructura subyacente del documento.
+</p>
+<br>
+<h5>
+  La estructura de HTML debería ser clara
+</h5>
+<p>
+  XML y XHTML son formatos fundados sobre la idea de un documento estructurado. Tal estructura se refleja en su marcado, y asimismo debería reflejarse en metamarcado como Haml. Debido a que la lógica de Haml se basa en el sangrado de elementos hijos, esta estructura se preserva naturalmente, lo que hace al documento mucho más fácil y lógico de leer por simples humanos.
+</p>
+<br>
+<h3>
+  No sólo Ruby...
+</h3>
+<p>
+  La implementación oficial de HAML está hecha para trabajar con Ruby, con extensiones para Ruby on Rails y Merb, pero también es bastante útil para el desarrollo web en general. A continuación expongo un ejemplo de HAML - HTML
+</p>
+<br>
+<h4>
+  Ejemplo HAML - HTML
+</h4>
+<textarea name="" id="" cols="35" rows="13">
+  HAML:
+  !!!
+  %html
+    %head
+      %title Mi app
+    %body
+  %h1 Bienvenidos a mi app
+  %p "El marcado deberia ser hermoso"
+    %ul.menu
+  %li Primer elemento
+  %li Segundo elemento
+</textarea>

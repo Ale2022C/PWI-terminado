@@ -1,0 +1,87 @@
+<br><hr>
+<h1>
+    <u>LESS</u>
+</h1>
+<hr><br><br>
+<p>
+    Todos sabemos lo frustante que es picar código en CSS, sobre todo cuando se trata de proyectos serios con miles y miles de líneas de código. Terminamos duplicando las mismas reglas en todos sitios y utilizando el buscador de nuestro editor para sustituir la cadena de color cada vez que queramos cambiar el color de determinados elementos. Se necesita mucho esfuerzo y disciplina para gestionar correctamente un archivo CSS de gran tamaño. Pero no tiene por qué ser así.
+</p>
+<br>
+<p>
+    Por suerte, la comunidad ha resuelto este problema. Ahora contamos con pre-procesadores de CSS tales como Less, Sass y Stylus que nos proporcionan una serie de ventajas sobre el CSS llano:
+</p>
+<ul>
+    <li>Variables, de modo que puedes definir y cambiar fácilmente los valores a través de la misma hoja de estilo.</li>
+    <li>Valores calculados dinámicamente. (En CSS actualmente tenemos calc, pero sólo para unidades de longitud.)</li>
+    <li>Mixins, que te permiten reutilizar y combinar estilos. Incluso soportan pasar argumentos.</li>
+    <li>Funciones, que te dan una serie de utilidades prácticas para la manipulación de color, conversión de imágenes a data-uris y mucho más.</li>
+</ul>
+<br>
+<p>
+    El aspecto negativo de todo esto es, que si utilizas uno de estos pre-procesadores, tendrás que compilar tus hojas de estilo a CSS regular para que funcione en todos los navegadores.
+</p>
+<br>
+<h3>
+    Empezando con LESS
+</h3>
+<br>
+<p>
+    Less está desarrollado en JavaScript, y necesita de Node.js o de un navegador web para funcionar. Puedes incluir less.js en tu sitio web y compilar todas las hojas de estilo .less en tiempo real, pero es una tarea lenta y, la verdad, no te lo recomiendo. Lo mejor es compilar tus hojas de estilo less antes y generar un archivo CSS para luego utilizarlo en la web. También hay una serie de programas que son capaces de compilar archivos .less, pero en este artículo vamos a tratar node.js.
+</p>
+<br>
+<p>
+    Si tienes node instalado, y sabes lo que es una terminal, sigue adelante y abre una. A continuación, instala less utilizando NPM:
+</p>
+<br>
+<textarea name="" id="" cols="20" rows="1">npm install -g less</textarea>
+<br>
+<p>
+    Esto te dará acceso a utilizar el comando lessc desde cualquier terminal abierta, lo que te permitirá compilar tus archivos .less en vanilla CSS tal que así:
+</p>
+<br>
+<textarea name="" id="" cols="30" rows="1">lessc styles.less > styles.css</textarea>
+<br>
+<p>
+    Digamos que hemos escrito todas nuestras reglas de CSS con less en styles.less. Con la línea anterior, nuestro código se transformará en CSS sin formato en un fichero llamado styles.css. Todo lo que quedaría es vincular este css en nuestro HTML. Si existe un error de compilación, se mostrará en tu terminal.
+</p>
+<br>
+<p>
+    En este ejemplo, definimos dos variables, una para el color de fondo y otra para el color del texto, ambas contienen códigos hexadecimales:
+</p>
+<br>
+<textarea name="" id="" cols="55" rows="35">
+                LESS
+
+@background-color: #ffffff;
+@text-color: #1A237E;
+
+p{
+  background-color: @background-color;
+  color: @text-color;
+  padding: 15px;
+}
+
+ul{
+  background-color: @background-color;
+}
+
+li{
+  color: @text-color;
+}
+
+                CSS
+
+p{
+  background-color: #ffffff;
+  color: #1A237E;
+  padding: 15px;
+}
+
+ul{
+  background-color: #ffffff;
+}
+
+li{
+  color: #1A237E;
+}
+</textarea>

@@ -1,0 +1,16 @@
+h2 {
+font-size: 60px;
+color: #fff;
+text-align: center;
+-webkit-animation: glow 1s ease-in-out infinite alternate;
+-moz-animation: glow 1s ease-in-out infinite alternate;
+animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+from {
+    text-shadow: 0 10 10px #fff, 0 0 20px #fff, 0 0 30px #6BFFAE, 0 0 40px #6BFFAE, 0 0 50px #6BFFAE, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #FFC701, 0 0 40px #000000, 0 0 50px #FFC701, 0 0 60px #FFC701, 0 0 70px #3b3b3b, 0 0 80px #000000;
+}}

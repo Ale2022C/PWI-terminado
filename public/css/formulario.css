@@ -1,9 +1,4 @@
-
-body {
-    background: radial-gradient(#ffffff, #ff0008);
-    }
-
-body:hover {
-    background: palegreen;
+* {
+    color: #ffffff;
+    position: relative;
 }
-

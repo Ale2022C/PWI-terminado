@@ -1,0 +1,102 @@
+<br><hr>
+<h1>
+    <u>JADE</u>
+</h1>
+<hr><br><br>
+<h3>
+  ¿Qué es JADE?
+</h3>
+<br>
+<p>
+  Jade es un motor de plantillas que simplifica la sintaxis de html, agiliza y facilita el proceso de desarrollo de plantillas html.
+<br>
+  Para poder trabajar con Jade, necesitas tener instalado Nodejs y después podrás instalarlo mediante npm. Esto es lo primero que haremos.
+</p>
+<br>
+<h5>
+  Instalación de NodeJS y jade
+</h5>
+<p>
+  <u>Instalar Nodejs:</u> Para instalar Nodejs no puede ser más fácil. Tan solo tenemos que entrar en su página de descargas y elegir la versión que queramos para nuestro equipo y sistema operativo. Una vez descargado, tan solo tenemos que ejecutar el instalador y esperar a que finalice la instalación. Actualmente NodeJs ya trae consigo instalado npm, lo que nos facilitará mucho el proceso de instalación.
+</p>
+<br>
+<p>
+  <u>Instalar jade:</u> Para instalar jade en nuestro equipo, tenemos que abrir una terminal o consola de nuestro sistema operativo. En windows, la puedes abrir buscando la palabra cmd en el cuadro de búsqueda de inicio o bien pulsando ctrl+r y escribiendo cmd. En MacOS busca la terminal y si estás usando Linux, no creo que sea necesario explicarlo.
+</p>
+<br>
+<p>
+  Una vez abierta la consola, escribimos:
+</p>
+<textarea name="" id="" cols="30" rows="1">npm install jade --global</textarea>
+<br><br>
+<img src="http://blog.alejandromolero.com/wp-content/uploads/2015/08/jade-install.jpg" alt="">
+<br><br><br>
+<h5>
+  Simplificación de las etiquetas html
+</h5>
+<br>
+<p>
+  No necesitas hacer uso de las etiquetas (<tag>) de html. Tan solo poniendo el nombre de la etiqueta y un espacio, jade te genera la apertura y cierre de dicha etiqueta.
+</p>
+<br>
+<p>
+  Por ejemplo, esta línea de código en jade:
+</p>
+<textarea name="" id="" cols="70" rows="1">a(href="http://blog.alejandromolero.com", target="_blank") ir al Blog</textarea>
+<p>genera:</p>
+<textarea name="" id="" cols="80" rows="1"><a href="http://blog.alejandromolero.com" target="_blank">ir al Blog</a></textarea>
+<br>
+<p>
+  Como ves, abre y cierra la etiqueta automáticamente.
+</p>
+<p>
+  añadir atributos: Para poder añadir los atributos de las etiquetas, como en este caso href y target de la etiqueta a, se ponen entre paréntesis () separados por comas.
+</p>
+<br>
+<p>
+  Asignar ids y clases: Para asignar ids y clases se puede usar el sistema anterior, pero Jade tiene su propio método. Si conoces Emmet, no deberías tener ningún problema en saber hacerlo:
+</p>
+<br>
+<textarea name="" id="" cols="45" rows="8">
+  //- Declaración de un id
+div#portada
+
+//- Declaración de una clase
+div.wrap
+
+//- Declaración de ambos con mas de una clase
+div#portada.wrap.white</textarea>
+<br><br>
+<h5>
+  Anidación de elementos mediante indentación
+</h5>
+<br>
+<p>
+  Si quieres anidar un elemento dentro de otro, Jade lo hará por nosotros mediante la indentación (tabulaciones). Ya no tendrás que preocuparte de si has cerrado o no las etiquetas de los elementos anidados. El dejar una etiqueta sin cerrar o mal cerrada dentro de otra, provoca en muchos casos problemas con los estilos CSS y/o de maquetación.
+</p>
+<br>
+<p>
+  Mejor vemos cómo funciona mediante un ejemplo:
+</p>
+<br>
+<textarea name="" id="" cols="77" rows="7">
+  article
+    h1 Título de la noticia
+    figure
+        img(src="image/foto.jpg", alt="primera imagen", title="Primera foto")
+        figcaption pie de foto
+    p cuerpo de la noticia
+</textarea>
+<br>
+<p>
+  esto generará la siguiente estructura html:
+</p>
+<br>
+<textarea name="" id="" cols="80" rows="8">
+  <article>
+  <h1>Título de la noticia</h1>
+  <figure><img src="image/foto.jpg" alt="primera imagen" title="Primera foto"/>
+    <figcaption>pie de foto</figcaption>
+  </figure>
+  <p>cuerpo de la noticia</p>
+</article></textarea>

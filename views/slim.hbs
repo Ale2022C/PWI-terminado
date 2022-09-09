@@ -1,0 +1,83 @@
+<br><hr>
+<h1>
+    <u>SLIM</u>
+</h1>
+<hr><br><br>
+<h3>
+¿Qué es SLIM?
+</h3>
+<p>
+Slim es un lenguaje de plantillas, cuyo objetivo es reducir la sintaxis de las partes esenciales sin llegar a ser críptico.
+</p>
+<p>
+El diseño inicial de Slim es comenzó como un ejercicio para ver cuánto podría ser eliminada de una plantilla estándar HTML (<,>, etiquetas de cierre, etc ...). A medida que más personas se interesaron por Slim, la funcionalidad creció y también lo hizo la flexibilidad de la sintaxis.
+</p>
+<p>
+Slim se esfuerza por mantener la simplicidad, pero la sintaxis de definición legible de todo el mundo no es la misma.
+</p>
+<p>
+Slim es un motor de plantillas rápido, ligero con soporte para Rails 3 y 4.Se ha probado en gran medida en las principales implementaciones de rubí. Utiliza integración continua (travis-ci)
+</p>
+<br>
+<br>
+<hr>
+<h5>Pensamiento: "¿Cuál es el mínimo necesario para hacer este trabajo?"</h5>
+<hr>
+<br>
+<p>
+A medida que más personas han contribuido a Slim, se han agregado adiciones de sintaxis influenciados por su uso de Haml y Jade. El equipo de Slim está abierto a estas adiciones porque sabemos la belleza está en el ojo del espectador.
+</p>
+<p>
+Slim utiliza Temple para analizar/compilar y también está integrado en Tilt, por lo que se puede utilizar junto con Sinatra o un estante Rack.
+</p>
+<p>
+La arquitectura del Temple es muy flexible y permite la extensión del proceso de análisis y compilación sin monoparches. Esto es utilizado por logic less plugin y el plugin traductor que proporciona I18n. En el modo logic less puede utilizar Slim si te gusta la sintaxis para construir su HTML, pero no quiere escribir Rubí en sus plantillas.
+</p>
+<br>
+<br>
+<h5>¿Por qué utilizar Slim?</h5>
+<p>
+Slim le permite escribir plantillas fáciles de mantener y prácticamente garantiza que usted escribe bien formado y XML y HTML
+</p>
+<p>
+También pensamos que la sintaxis Slim también es estético y lo hace mucho más divertido de escribir plantillas. Ya que se puede utilizar Slim como un gota en el reemplazo de todo el marco principal se puede empezar fácilmente.
+</p>
+<p>
+La arquitectura Slim es muy flexible y permite escribir extensiones y plugins de sintaxis. Slim fue desarrollado desde el principio con el rendimiento en mente.Acabamos de garantizar que Slim no tiene un impacto negativo en el rendimiento de la aplicación.
+</p>
+<br>
+<br>
+<h5>Sintaxis</h5>
+<textarea name="" id="" cols="50" rows="35">
+    doctype html
+    html
+    head
+        title Slim Examples
+        meta name="keywords" content="template language"
+        meta name="author" content=author
+        link rel="icon" type="image/png" href=file_path("favicon.png")
+        javascript:
+        alert('Slim supports embedded javascript!')
+
+    body
+        h1 Markup examples
+
+        #content
+        p This example shows you how a basic Slim file looks.
+
+        == yield
+
+        - if items.any?
+        table#items
+            - for item in items
+            tr
+                td.name = item.name
+                td.price = item.price
+        - else
+        p No items found. Please add some inventory.
+            Thank you!
+
+        div id="footer"
+        == render 'footer'
+        | Copyright &copy; #{@year} #{@author}
+</textarea>

@@ -1,7 +1,7 @@
-
+{{!-- Formulario de registro con nombre, apellido y mensaje --}}
 <div class="container">
 
-<div class="text-center m-5">
+<div class="text-center m-5 text-white">
     <hr>
     <h1>
         {{ titulo }}
@@ -12,20 +12,28 @@
 <div class="row">
 <form action="./formulario" method="post">
     <div class="mb-3 row">
-        <label for="nombre" class="col-sm-2 col-form-label">Nombre: </label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre de Producto">
+        <label for="nombre" class="col-sm-2 col-form-label text-white">Nombre: </label>
+    <div class="col-sm-8">
+        <input type="text" maxlength="40" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
     </div>
     </div>
     <div class="mb-3 row">
-        <label for="precio" class="col-sm-2 col-form-label">Precio: </label>
-    <div class="col-sm-10">
-        <input type="number" class="form-control" name="precio" id="precio">
+        <label for="apellido" class="col-sm-2 col-form-label text-white">Apellido: </label>
+    <div class="col-sm-8">
+        <input type="text" maxlength="40" class="form-control" name="apellido" id="apellido" placeholder="Apellido">
+    </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="mensaje" class="col-sm-2 col-form-label text-white">Mensaje: </label>
+    <div class="col-sm-8">
+        <input type="text" maxlength="80" class="form-control" name="mensaje" id="mensaje" placeholder="Mensaje">
     </div>
     </div>
     <div class="mb-3 text-center">
         <input type="submit" class="button btn btn-success w-50 p-2" value="Enviar Datos">
     </div>
+    
+    
 
     <div class="text-center">
         <h2 class="text-danger">
@@ -33,6 +41,5 @@
         </h2>
     </div>
 </form>
-
-</div>
+    </div>
 </div>

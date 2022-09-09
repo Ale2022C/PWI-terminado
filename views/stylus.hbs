@@ -1,0 +1,107 @@
+<br><hr>
+<h1>
+    <u>STYLUS</u>
+</h1>
+<hr>
+<hr><br><br>
+<h4>
+    Codigo CSS
+</h4>
+<img src="https://dc722jrlp2zu8.cloudfront.net/media/cache/8a/b7/8ab74dbfd9771bcbb5db2240e3224393.webp" alt="">
+<br><br>
+<p>
+    Al realizar tareas de frontends todos nos hemos encontrado con algunos de los típicos problemas que tiene CSS:
+</p>
+<ul>
+    <li>No podemos hacer uso de variables ( *_* developers )</li>
+    <li>No podemos reutilizar código mediante funciones , solo creando nuevas clases.</li>
+    <li>Su sintaxis es repetitiva .</li>
+    <li>Llaves , paréntesis , puntos y coma que nos quitan tiempo de tipeado.</li>
+    <li>Varios prefijos para diferentes motores de navegadores en algunas reglas CSS.</li>
+    <li>Se puede convertir fácilmente en código espagueti en proyectos de gran tamaño</li>
+</ul>
+<br>
+<h3>
+    Instalación de Stylus
+</h3>
+<br>
+<p>
+Stylus es uno de estos pre-procesadores que vienen para ayudarte en tu tarea de creación de hojas de estilo. Stylus está construido sobre Node,JS por lo tanto tendrás que instalarlo primero en tu sistema operativo. Más información sobre como instalar NodeJS en Nodejs.org .
+Debes también instalar el gestor de paquetes de Node,JS: Node Package Manager NPM , aunque en las últimas versiones de NodeJS ya viene incluido por defecto.
+</p>
+<br>
+<img src="https://dc722jrlp2zu8.cloudfront.net/media/cache/09/f5/09f57bfb1e9f10465d05e6cd87807ec8.webp" alt="">
+<br><br>
+<textarea name="" id="" cols="28" rows="1">$ npm install stylus -g</textarea>
+<br><br>
+<h3>
+    Características más importantes de Stylus
+</h3>
+<br>
+<ul>
+    <li>Paréntesis opcionales.</li>
+    <li>Llaves opcionales.</li>
+    <li>Puntos y comas opcionales.</li>
+    <li>Comas opcionales.</li>
+    <li>Uso de Variables.</li>
+    <li>Mixins.</li>
+    <li>Interpolación ( Uso de for X in Z )</li>
+    <li>Uso de funciones ( más de 60 funciones ya incluidas).</li>
+    <li>Compresión de Css</li>
+    <li>Selectores anidados.</li>
+    <li>Concatenación de Selectores.</li>
+    <li>Uso de funciones aritméticas.</li>
+    <li>Condicionales.</li>
+    <li>y muchás más!</li>
+</ul>
+<br><br>
+<h3>Compilación de CSS con Stylus</h3>
+<br>
+<p>
+    Cuando trabajamos con Stylus crearemos archivos con extensión .styl que serán los que se compilen para generar finalmente nuestro/s archivo/s .css .
+    Para realizar la compilación solo tenemos que usar el comando stylus:
+</p>
+<br>
+<textarea name="" id="" cols="37" rows="1">$ stylus mi_estilo.styl mi_estilo.css</textarea>
+<br>
+<p>
+    Con esto conseguiremos compilar el archivos <i>mi_estilo.styl</i> y generar el archivo <i>mi_estilo.css</i>.
+</p>
+<br><br>
+<h5>
+    Algunas de las opciones más interesantes a la hora de compilar son las siguientes:
+</h5>
+<br>
+<li>
+    Compresión de CSS: Conseguiremos archivos comprimidos css para ahorrar tamaño en el fichero css.
+</li>
+<textarea name="" id="" cols="52" rows="1">$ stylus --compress mi_estilo.styl > mi_estilo.css</textarea>
+<br>
+<br>
+<li>
+    Compilación de una carpeta completa:
+</li>
+<textarea name="" id="" cols="40" rows="1">$ stylus carpeta--out public/stylesheets</textarea>
+<br>
+<br>
+<li>
+    Compilación dinámica: Los archivos se compilarán automáticamente cuando realizamos un cambio en el archivo:
+</li>
+<textarea name="" id="" cols="30" rows="1">$ stylus -w mi_estilo.styl</textarea>
+<br>
+<br>
+<li>
+    Conversión de archivos CSS a STYL:
+</li>
+<textarea name="" id="" cols="30" rows="1">$ stylus --css mi_estilo.css</textarea>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,21 +1,48 @@
-
-
-<div class="text-center m-5">
-    <hr>
-    <h1>
-        {{ titulo }}
-    </h1>
-    <hr>
-</div>
-
 <body>
-
-    <div class="bg-animation">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div id="stars4"></div>
+    <div class="text-center m-5">
+        <hr>
+        <h1>
+            Bienvenidos a mi pagina sobre Frontend
+        </h1>
+        <hr>
     </div>
 
+<audio id="myAudio">
+  <source src="audio/estrellas.mp3" type="audio/mpeg">
+</audio>
+<div class="container col-xxl-8 px-4 py-2">
+
+<h3>A esta pagina le falta algo...</h3>
+
+<button class="music" onclick="playAudio()" type="button">Dale el toque</button>
+<button class="music" onclick="pauseAudio()" type="button">Corta el flow</button> 
+
+{{!-- Audio para musicalizar el fondo --}}
+<script>
+    var x = document.getElementById("myAudio"); 
+    function playAudio() { 
+    x.play(); 
+    autoplay();
+    } 
+    function pauseAudio() { 
+    x.pause(); 
+} 
+</script>
+
+{{!-- Presentacion --}}
+<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+  <div class="col-10 col-sm-8 col-lg-6">
+    </div>
+      <div class="col-lg-20">
+        <img class="profile" src="/images/Profile.png" alt="">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Acerca de mi</h1>
+        <p class="lead">Mi nombre es Nestor Alejandro Cisak. Actualmente me encuentro estudiando la diplomatura en Programación Web Fullstack Avanzado en la Universidad Tecnologica Nacional de Buenos Aires (UTN) en la modalidad a distancia.</p>
+        <br>
+        <p class="lead">
+        Me interesa todo lo referido a la programacion web y quiero especializarme en backend, aunque tambien me interesa mucho aprender todo lo necesario para armar un sitio web desde el frontend con HTML, CSS y JS.
+        Espero que disfruten de mi primer sitio web responsive con material informativo y que les sea de gran ayuda.</p>
+      </div>
+    </div>
+  </div>
 </body>
 
