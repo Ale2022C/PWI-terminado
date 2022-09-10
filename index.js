@@ -147,8 +147,6 @@ app.get('/less', (req, res) => {
 
 app.post('/contacto', (req, res) => {
     const { nombre, email } = req.body;
-    // let fecha = new Date();
-    // let dia = fecha.getFullYear();
 
     if (nombre == '' || email == '') {
         let validacion = 'Rellene la suscripcion correctamente..';

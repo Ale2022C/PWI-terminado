@@ -1,0 +1,7 @@
+1)Abrir el script SQL (DB.sql) y ejecutarlo en mySQL
+2)Descomentar en el archivo index.js:
+Desde la linea 11 hasta la linea 25 (Conexion a la base de datos),
+Desde la linea 53 hasta la linea 56 y las lineas 60 y 63 (Query),
+Desde la linea 73 hasta la linea 99 (app.post de formulario),
+
+
