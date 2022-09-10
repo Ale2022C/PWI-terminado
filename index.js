@@ -70,24 +70,24 @@ app.get('/preprocesadores', (req, res) => {
     });
 });
 
-// app.post('/formulario', (req, res) => {
-//     const { nombre, apellido, mensaje } = req.body;
+app.post('/formulario', (req, res) => {
+    const { nombre, apellido, mensaje } = req.body;
 
-//     // console.log(nombre, precio);
+    // console.log(nombre, precio);
 
-//     if (nombre == '' || apellido == '' || mensaje == '') {
-//         let validacion = 'Rellene los campos correctamente..';
-//         res.render('formulario', {
-//             titulo: 'Formulario para preprocesadores',
-//             validacion
-//         });
-//     } else{
+    if (nombre == '' || apellido == '' || mensaje == '') {
+        let validacion = 'Rellene los campos correctamente..';
+        res.render('formulario', {
+            titulo: 'Formulario para preprocesadores',
+            validacion
+        });
+    } else{
 
-//         let datos = {
-//             nombre: nombre, 
-//             apellido: apellido,
-//             mensaje: mensaje
-//         };
+        let datos = {
+            nombre: nombre, 
+            apellido: apellido,
+            mensaje: mensaje
+        };
 
 //         let sql = 'INSERT INTO preprocesadores SET ?';
 
