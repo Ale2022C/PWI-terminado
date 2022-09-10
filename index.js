@@ -48,18 +48,18 @@ app.get('/formulario', (req, res) => {
     })
 });
 
-// app.get('/listado', (req, res) => {
+app.get('/listado', (req, res) => {
 
-//     // let sql = 'SELECT * FROM preprocesadores';
+    // let sql = 'SELECT * FROM preprocesadores';
 
-//     //     conexion.query(sql, (err, result) => {
-//     //         if (err) throw err;
-//             res.render('listado', {
-//                 titulo: 'Listado de productos', 
-//                 style: 'listado.css',
-//                 // results: result,
-//         });
-//     });
+    //     conexion.query(sql, (err, result) => {
+    //         if (err) throw err;
+            res.render('listado', {
+                titulo: 'Listado de productos', 
+                style: 'listado.css',
+                // results: result,
+        });
+    });
 // });
 
 
@@ -70,24 +70,22 @@ app.get('/preprocesadores', (req, res) => {
     });
 });
 
-app.post('/formulario', (req, res) => {
-    const { nombre, apellido, mensaje } = req.body;
+// app.post('/formulario', (req, res) => {
+//     const { nombre, apellido, mensaje } = req.body;
 
-    // console.log(nombre, precio);
+//     if (nombre == '' || apellido == '' || mensaje == '') {
+//         let validacion = 'Rellene los campos correctamente..';
+//         res.render('formulario', {
+//             titulo: 'Formulario para preprocesadores',
+//             validacion
+//         });
+//     } else{
 
-    if (nombre == '' || apellido == '' || mensaje == '') {
-        let validacion = 'Rellene los campos correctamente..';
-        res.render('formulario', {
-            titulo: 'Formulario para preprocesadores',
-            validacion
-        });
-    } else{
-
-        let datos = {
-            nombre: nombre, 
-            apellido: apellido,
-            mensaje: mensaje
-        };
+//         let datos = {
+//             nombre: nombre, 
+//             apellido: apellido,
+//             mensaje: mensaje
+//         };
 
 //         let sql = 'INSERT INTO preprocesadores SET ?';
 
@@ -105,47 +103,47 @@ app.get('/contacto', (req, res) => {
         titulo: 'Formulario para suscripcion',
         style: 'contacto.css'
     })
-})
+});
 
 app.get('/haml', (req, res) => {
     res.render('haml', {
         style: 'prepro-contenido.css'
     })
-})
+});
 
 app.get('/jade', (req, res) => {
     res.render('jade', {
         style: 'prepro-contenido.css'
     })
-})
+});
 
 app.get('/slim', (req, res) => {
     res.render('slim', {
         style: 'prepro-contenido.css'
     })
-})
+});
 
 app.get('/sass', (req, res) => {
     res.render('sass', {
         style: 'prepro-contenido.css'
     })
-})
+});
 
 app.get('/stylus', (req, res) => {
     res.render('stylus', {
         style: 'prepro-contenido.css'
     })
-})
+});
 app.get('/postcss', (req, res) => {
     res.render('postcss', {
         style: 'prepro-contenido.css'
     })
-})
+});
 app.get('/less', (req, res) => {
     res.render('less', {
         style: 'prepro-contenido.css'
     })
-})
+});
 
 app.post('/contacto', (req, res) => {
     const { nombre, email } = req.body;
@@ -192,9 +190,9 @@ app.post('/contacto', (req, res) => {
     }
 })
 
-// app.listen(PORT, () => {
-//     console.log(`El servidor está trabajando en el Puerto ${PORT}`);
-// });
+app.listen(PORT, () => {
+    console.log(`El servidor está trabajando en el Puerto ${PORT}`);
+});
 
 
 
