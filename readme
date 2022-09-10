@@ -4,7 +4,7 @@ Descripcion del proyecto de Programador Web Inicial de la UTN:
 Este proyecto trata sobre preprocesadores html y css.
 
 Este proyecto fue realizado principalmente con el uso de las siguientes herramientas:
-Html, Css, Javascript, NodeJS, Mysql.
+Hbs, Css, Javascript, NodeJS, Mysql.
 
 La pagina contiene una pagina de inicio, una informativa, una de formulario, una de contacto y otra que expone la lista de los que rellenen el formulario.
 La misma cuenta con un diseño responsive que se ajusta a las necesidades de los distintos dispositivos que puedan estar utilizando los visitantes.
