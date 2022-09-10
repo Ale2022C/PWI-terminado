@@ -6,7 +6,7 @@ const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
 
 const app = express();
-// const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 
 // Conexión a la Base de Datos
 // const conexion = mysql.createConnection({
