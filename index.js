@@ -48,18 +48,18 @@ app.get('/formulario', (req, res) => {
     })
 });
 
-app.get('/listado', (req, res) => {
+// app.get('/listado', (req, res) => {
 
-    // let sql = 'SELECT * FROM preprocesadores';
+//     // let sql = 'SELECT * FROM preprocesadores';
 
-    //     conexion.query(sql, (err, result) => {
-    //         if (err) throw err;
-            res.render('listado', {
-                titulo: 'Listado de productos', 
-                style: 'listado.css',
-                // results: result,
-        });
-    });
+//     //     conexion.query(sql, (err, result) => {
+//     //         if (err) throw err;
+//             res.render('listado', {
+//                 titulo: 'Listado de productos', 
+//                 style: 'listado.css',
+//                 // results: result,
+//         });
+//     });
 // });
 
 
