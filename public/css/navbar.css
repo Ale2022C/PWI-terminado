@@ -41,7 +41,7 @@ nav{
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4 ;
-                scale: 1.5;
+                scale: 1;
 }
 @media(max-width:768px){
     nav{
