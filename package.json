@@ -4,7 +4,7 @@
   "description": "Trabajo final",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js & layout.hbs"
+    "start": "node index.js"
   },
   "author": "Ale",
   "license": "ISC",
